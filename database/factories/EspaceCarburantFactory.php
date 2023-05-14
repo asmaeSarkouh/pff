@@ -13,8 +13,11 @@ class EspaceCarburantFactory extends Factory
      */
     public function definition()
     {
-        return [
-            //
+         return [
+            'date'=>$this->faker->date(),
+            'quantite'=>$this->faker->randomDigit(100),
+            'paye'=>$this->faker->randomNumber(),
+            'espace_vehicule_id'=>EspaceVehicule::inRandomOrder()->first()
         ];
     }
 }
