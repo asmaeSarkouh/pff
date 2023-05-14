@@ -142,6 +142,10 @@ class DatabaseSeeder extends Seeder
             'type'=>$t['type']
          ]);
         }
-      
+      User::factory(2)->create();
+        EspaceVehicule::factory(3)->create();
+        EspaceMaintenance::factory(2)->create();
+        EspaceCarburant::factory(2)->create();
+        TableDeBord::factory(1)->create();
    }
 }
